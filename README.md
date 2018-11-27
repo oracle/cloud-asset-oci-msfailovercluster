@@ -18,3 +18,6 @@ In settings.json if you don't specify anything for "sql_cluster_name" the "priva
 In settings.json "skip_dr_node_name" will be used if you have a DR setup (2 nodes on one DataCenter and one DR node on a different DataCenter). By specifying a name for "skip_dr_node_name" the script will ignore the DR node because it's on a different DataCenter and the VIP (virtual IP) address can not be moved.
 
 To automatically start the script at boot time, import in Task Scheduler the XML file called "oci-mscluster-scheduler.xml". Remember to change the path to the script at <Command></Command>.
+
+## Windows installer
+https://oradocs-corp.documents.us2.oraclecloud.com/documents/link/LD9C457CFE9F8495CFA3A2B6F6C3FF17C1177A968060/fileview/DAB718BFC86E7FD133EE694BF6C3FF17C1177A968060/_oci-mscluster-12-jul-2018.zip
