@@ -1,0 +1,6 @@
+[DEFAULT]
+user=
+fingerprint=
+key_file=C:\Program Files (x86)\OCI-MS-Cluster\oci_api_key.pem
+tenancy=
+region=
