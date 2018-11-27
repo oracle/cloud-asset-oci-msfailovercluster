@@ -1,6 +1,6 @@
-#OCI-MS-Cluster
+# OCI-MS-Cluster
 
-##In the archive you will find:
+## In the archive you will find:
 
 1. oci-mscluster.py - Python source code.
 2. oci-ms-cluster-installer.exe - Windows installer created using Inno Setup.
