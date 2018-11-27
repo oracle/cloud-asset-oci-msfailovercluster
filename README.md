@@ -4,12 +4,12 @@
 
 1. oci-mscluster.py - Python source code.
 2. oci-ms-cluster-installer.exe - Windows installer created using Inno Setup.
-⋅⋅1. oci_config - OCI configuration file used for Python OCI module.
-⋅⋅2. settings.json - variables used in the script for switching a VIP from one node to another.
-⋅⋅3. oci-mscluster.exe - Python script converted to Windows binary using PyInstaller.
-⋅⋅4. oci-mscluster-scheduler.xml - XML for Windows Task Scheduler. The script will be added at Windows startup.
-⋅⋅5. README.txt - short description of the script.
-⋅⋅6. error.log - this file will be created when the script is running and will append changes encountered in the cluster environment.
+  * oci_config - OCI configuration file used for Python OCI module.
+  * settings.json - variables used in the script for switching a VIP from one node to another.
+  * oci-mscluster.exe - Python script converted to Windows binary using PyInstaller.
+  * oci-mscluster-scheduler.xml - XML for Windows Task Scheduler. The script will be added at Windows startup.
+  * README.txt - short description of the script.
+  * error.log - this file will be created when the script is running and will append changes encountered in the cluster environment.
 
 In oci_config add the real path for "key_file".
 
