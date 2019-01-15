@@ -20,9 +20,7 @@ In settings.json "skip_dr_node_name" will be used if you have a DR setup (2 node
 To automatically start the script at boot time, import in Task Scheduler the XML file called "oci-mscluster-scheduler.xml". Remember to change the path to the script at <Command></Command>.
 
 ## Windows installer
-
 https://oradocs-corp.documents.us2.oraclecloud.com/documents/link/LD8E7C90DAB8870B8D385A43F6C3FF17C1177A968060/fileview/DAB718BFC86E7FD133EE694BF6C3FF17C1177A968060/_oci-mscluster-12-jul-2018.zip
 
 ## Documentation on how to install Microsoft Windows Server Failover Clustering & SQL Server High Availability
-
 Use similar documnetation described in OCIC-MS-Cluster - https://orahub.oraclecorp.com/ateam/ocic-msfailovercluster
