@@ -1,10 +1,10 @@
 {
-    "node1_name": "Cluster-NODE2",
-    "node2_name": "Cluster-NODE3",
+    "node1_name": "Cluster-NODE1",
+    "node2_name": "Cluster-NODE2",
     "sql_cluster_name": "",
-    "private_ip_id_default_cluster": "ocid1.privateip.oc1.eu-frankfurt-1",
+    "private_ip_id_default_cluster": "<ocid of cluster private IP>",
     "private_ip_id_sql_cluster":"",
     "skip_dr_node_name":"",
-    "vnic_1": "ocid1.vnic.oc1.eu-frankfurt-1-1",
-    "vnic_2": "ocid1.vnic.oc1.eu-frankfurt-1-2"
+    "vnic_1": "<ocid of VNIC1>",
+    "vnic_2": "<ocid of VNIC2>"
 }
