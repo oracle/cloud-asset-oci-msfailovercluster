@@ -1,6 +1,6 @@
 [DEFAULT]
-user=
-fingerprint=
-key_file=C:\Program Files (x86)\OCI-MS-Cluster\oci_api_key.pem
-tenancy=
-region=
+user=<OCI User>
+fingerprint=<Key Fingerprint>
+key_file=<key file location>
+tenancy=<Tenancy OCID>
+region=<Region where Windows machines are located>
