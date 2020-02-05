@@ -1,4 +1,4 @@
-#### Implementing a Windows Failover Cluster on OCI
+# Implementing a Windows Failover Cluster on OCI
 
 ## License
 
