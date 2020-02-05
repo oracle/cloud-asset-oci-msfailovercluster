@@ -1,4 +1,4 @@
-# Implementing a Windows Failover Cluster on OCI
+# Script for Implementing a Windows Failover Cluster on OCI
 
 ## License
 
