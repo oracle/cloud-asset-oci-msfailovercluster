@@ -1,4 +1,5 @@
-# OCI-MS-Cluster
+
+## Implementing a Windows Failover Cluster on OCI
 
 Copyright © 2020, Oracle and/or its affiliates. All rights reserved.
 
