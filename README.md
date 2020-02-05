@@ -1,6 +1,6 @@
 # OCI-MS-Cluster
 
-Copyright © 2019, Oracle and/or its affiliates. All rights reserved.
+Copyright © 2020, Oracle and/or its affiliates. All rights reserved.
 
 The Universal Permissive License (UPL), Version 1.0
 
