@@ -1,4 +1,6 @@
-## Implementing a Windows Failover Cluster on OCI
+#### Implementing a Windows Failover Cluster on OCI
+
+## License
 
 Copyright © 2020, Oracle and/or its affiliates. All rights reserved.
 
