@@ -1,4 +1,4 @@
-# Script for Implementing a Windows Failover Cluster on OCI
+# Script for Implementing Cluster IP Failover for a Windows Failover Cluster on OCI
 
 Microsoft Windows allows you to configure a [failover cluster](https://docs.microsoft.com/en-us/windows-server/failover-clustering/failover-clustering-overview).
 As part of this configuration a single cluster IP address can be configured.  This IP address is hosted on the master node of the cluster and if the master node fails, it is automatically failed over to the new master node of the cluster.
