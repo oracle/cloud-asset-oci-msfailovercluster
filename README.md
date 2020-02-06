@@ -5,20 +5,20 @@ As part of this configuration a single cluster IP address can be configured.  Th
 
 As can be seen in the [documentation](https://docs.cloud.oracle.com/en-us/iaas/Content/Network/Tasks/managingIPaddresses.htm), on OCI, a vNIC can have one or more IP addresses assigned to it.  It will always have a primary IP address and can have multiple secondary IP addresses.  The IP address of each node in the cluster is assigned as the primary IP address of the vNIC assigned to that node.  The cluster IP address is assigned as a secondary IP address, initially to the vNIC of the master node in the cluster.  When the master node fails, whilst the Windows clusterware will fail the cluster IP address to the new master node automatically within the cluster, the secondary IP address also has to be reassigned to the vNIC of this new master node.  The script provided in the repo performs that functionality.
 
-The script supports a 2 node failover cluster for Windows Server 2016 or Windows Server 2019 with an optional DR node in a different data center.  It was designed to provide failover for nodes running SQL Server and optionally you can configure a SQL Server cluster name and IP in which case the script will failover the IP for this cluster as well as the default Windows failover cluster.
+The script supports a 2 node failover cluster for Windows Server 2016 or Windows Server 2019 with an optional DR node in a different data center.  It was designed to provide failover for nodes running SQL Server and optionally you can configure a SQL Server cluster name and IP in which case the script will failover the IP for this cluster as well as for the default Windows failover cluster.
 
 ## Prerequisites
 
 
 * A knowledge of Windows Server setup and administration is required.
-* A 2 node Windows Failover Cluster must be setup and configured on OCI before using the script and the node and cluster IP addresses defined in OCI.
+* A 2 node Windows Failover Cluster must be setup and configured on OCI before using the script, and the node and cluster IP addresses defined in OCI.
+* You should create a directory in an identical location of your choice on both nodes and place all the files from the repo in that directory.
 * The script is written in [Python](https://www.python.org/downloads/) and uses the [OCI Python SDK](https://github.com/oracle/oci-python-sdk).
     * Both must be installed on both nodes of the cluster prior to installing and configuring the script.
-* You should create a directory in an identical location of your choice on both nodes and place all the files from the repo in that directory.
 
 ## Configuration
 
-The `oci_config` file is preformatted.  It has placed holders for the values required to configure the OCI Python SDK, these are documented [here](https://docs.cloud.oracle.com/en-us/iaas/Content/API/Concepts/sdkconfig.htm).  Update it as appropriate. Please note add the real path for "key_file".  The script will use this file in preference for any config file you have already configured for the OCI Python SDK.
+The `oci_config` file is preformatted.  It has placed holders for the values required to configure the OCI Python SDK, these are documented [here](https://docs.cloud.oracle.com/en-us/iaas/Content/API/Concepts/sdkconfig.htm).  Update it as appropriate. Please note add the real path for "key_file".  The script will use this file in preference to any config file you have already configured for the OCI Python SDK.
 
 The `settings.json` configures the script for your specific environment.  It is preformated with placeholders.  Update it as appropriate:
 
