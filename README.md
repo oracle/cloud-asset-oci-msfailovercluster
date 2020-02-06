@@ -27,6 +27,7 @@ The oci_config file is preformatted.  It has placed holders for the values requi
 
 The settings.json configures the script for your specific environment.  It is preformated with placeholders.  Update it as appropriate:
 
+```json
 {
     "node1_name": "<Cluster Node Name 1>",  -- Required Cluster Node Name 1
     "node2_name": "<Cluster Node Name 2>",  -- Required Cluster Node Name 2
