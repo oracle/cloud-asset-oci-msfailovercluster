@@ -18,7 +18,7 @@ The script supports a 2 node failover cluster for Windows Server 2016 or Windows
 
 ## Configuration
 
-The `oci_config` file is preformatted.  It has placed holders for the values required to configure the OCI Python SDK, these are documented https://docs.cloud.oracle.com/en-us/iaas/Content/API/Concepts/sdkconfig.htm.  Update it as appropriate. Please note add the real path for "key_file".  The script will use this file in preference for any config file you have already configured for the OCI Python SDK.
+The `oci_config` file is preformatted.  It has placed holders for the values required to configure the OCI Python SDK, these are documented [here](https://docs.cloud.oracle.com/en-us/iaas/Content/API/Concepts/sdkconfig.htm).  Update it as appropriate. Please note add the real path for "key_file".  The script will use this file in preference for any config file you have already configured for the OCI Python SDK.
 
 The `settings.json` configures the script for your specific environment.  It is preformated with placeholders.  Update it as appropriate:
 
