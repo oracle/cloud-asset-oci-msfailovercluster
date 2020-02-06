@@ -1,10 +1,10 @@
 {
-    "node1_name": "Cluster-NODE1",
-    "node2_name": "Cluster-NODE2",
-    "sql_cluster_name": "",
-    "private_ip_id_default_cluster": "<ocid of cluster private IP>",
-    "private_ip_id_sql_cluster":"",
+    "node1_name": "<Cluster Node Name 1>",
+    "node2_name": "<Cluster Node Name 2>",
+    "sql_cluster_name": "<sql cluster name>",
+    "private_ip_id_default_cluster": "<ocid of windows cluster private IP>",
+    "private_ip_id_sql_cluster":"<ocid of SQL Server cluster private IP>",
     "skip_dr_node_name":"",
-    "vnic_1": "<ocid of VNIC1>",
-    "vnic_2": "<ocid of VNIC2>"
+    "vnic_1": "<ocid of Node 1 VNIC>",
+    "vnic_2": "<ocid of Node 2 VNIC>"
 }
