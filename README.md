@@ -11,8 +11,9 @@ The script provided in the repo performs that functionality.  The script support
 
 
 * A knowledge of Windows Server setup and administration is required.
-** This should be setup before using the script and the node and cluster IP addresses defined in OCI.
-* The script is written in [Python](https://www.python.org/downloads/) and uses the [OCI Python SDK](https://github.com/oracle/oci-python-sdk).  Both must be installed prior to installing and configuring the script.
+    * This should be setup before using the script and the node and cluster IP addresses defined in OCI.
+* The script is written in [Python](https://www.python.org/downloads/) and uses the [OCI Python SDK](https://github.com/oracle/oci-python-sdk).
+    * Both must be installed prior to installing and configuring the script.
 * You should create a directory in a location of your choice and place all the files from the repo in that directory.
 
 ## Configuration
