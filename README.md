@@ -13,14 +13,14 @@ The script provided in the repo performs that functionality.  The script support
 * A knowledge of Windows Server setup and administration is required.
 * A 2 node Windows Failover Cluster must be setup and configured on OCI before using the script and the node and cluster IP addresses defined in OCI.
 * The script is written in [Python](https://www.python.org/downloads/) and uses the [OCI Python SDK](https://github.com/oracle/oci-python-sdk).
-    * Both must be installed prior to installing and configuring the script.
-* You should create a directory in a location of your choice and place all the files from the repo in that directory.
+    * Both must be installed on both nodes of the cluster prior to installing and configuring the script.
+* You should create a directory in an identical location of your choice on both nodes and place all the files from the repo in that directory.
 
 ## Configuration
 
-The oci_config file is preformatted.  It has placed holders for the values required to configure the OCI Python SDK, these are documented https://docs.cloud.oracle.com/en-us/iaas/Content/API/Concepts/sdkconfig.htm.  Update it as appropriate. Please note add the real path for "key_file".
+The `oci_config` file is preformatted.  It has placed holders for the values required to configure the OCI Python SDK, these are documented https://docs.cloud.oracle.com/en-us/iaas/Content/API/Concepts/sdkconfig.htm.  Update it as appropriate. Please note add the real path for "key_file".  The script will use this file in preference for any config file you have already configured for the OCI Python SDK.
 
-The settings.json configures the script for your specific environment.  It is preformated with placeholders.  Update it as appropriate:
+The `settings.json` configures the script for your specific environment.  It is preformated with placeholders.  Update it as appropriate:
 
 ```javascript
 {
@@ -35,4 +35,4 @@ The settings.json configures the script for your specific environment.  It is pr
 }
 ```
 
-To automatically start the script at boot time, import in Task Scheduler the XML file called "oci-mscluster-scheduler.xml". Remember to change the path to the script at <Command></Command>.
+To automatically start the script at boot time, import in Task Scheduler the XML file `oci-mscluster-scheduler.xml`. Remember to change the path to the script at <Command></Command>.
