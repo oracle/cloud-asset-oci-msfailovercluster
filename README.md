@@ -28,24 +28,15 @@ The oci_config file is preformatted.  It has placed holders for the values requi
 The settings.json configures the script for your specific environment.  It is preformated with placeholders.  Update it as appropriate:
 
 {
-
     "node1_name": "<Cluster Node Name 1>",  -- Required Cluster Node Name 1
-    
     "node2_name": "<Cluster Node Name 2>",  -- Required Cluster Node Name 2
-    
     "sql_cluster_name": "<sql cluster name>", -- If SQL Server is in a cluster as well, specify the cluster name.  If not specified private_ip_id_sql_cluster will be ignored and is not required.
-    
     "private_ip_id_default_cluster": "<ocid of windows cluster private IP>", -- Required
-    
     "private_ip_id_sql_cluster":"<ocid of SQL Server cluster private IP>", -- Ignored if SQL Server cluster not present see above
-    
     "skip_dr_node_name":"",  -- If the cluster contains a DR node in a different DataCenter, specify its name here and it will be ignored by the script (which is for HA not DR)
-    
     "vnic_1": "<ocid of Node 1 VNIC>", -- Required
-    
     "vnic_2": "<ocid of Node 2 VNIC>" -- Required
-    
-}
+]
 
 
 To automatically start the script at boot time, import in Task Scheduler the XML file called "oci-mscluster-scheduler.xml". Remember to change the path to the script at <Command></Command>.
