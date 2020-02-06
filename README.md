@@ -36,3 +36,6 @@ The `settings.json` configures the script for your specific environment.  It is 
 ```
 
 To automatically start the script at boot time, import in Task Scheduler the XML file `oci-mscluster-scheduler.xml`. Remember to change the path to the script at <Command></Command>.
+
+## Help
+* The [Issues](https://github.com/oracle/cloud.asset.oci-msfailovercluster/issues) page of this GitHub repository.
