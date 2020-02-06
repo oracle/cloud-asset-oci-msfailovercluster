@@ -1,5 +1,8 @@
 # Script for Implementing a Windows Failover Cluster on OCI
 
+Microsoft Windows allows you to configure a Failover Cluster - https://docs.microsoft.com/en-us/windows-server/failover-clustering/failover-clustering-overview.
+As part of this configuration a single cluster IP address can be configured.  This IP address is hosted on the master node of the cluster and if the master node fails, it is automatically failed over to the new master node of the cluster.
+
 ## In the repo you will find:
 
 1. oci-mscluster.py - Python source code using user token for API access.
