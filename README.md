@@ -21,7 +21,7 @@ The script supports a 2 node failover cluster for Windows Server 2016 or Windows
 
 On both nodes of the cluster:
 
-1. Copy the contents of the repo the the directory previously created
+1. Copy the contents of the repo to the directory previously created
 2. Edit oci-mscluster-scheduler.xml and replace <location of python> with the path to the Python 3  binary on each Windows host and the path to the directory where you have copied the repo in the working directory
 3. Edit the oci_config file.  It is preformatted.  It has placed holders for the values required to configure the OCI Python SDK, these are documented [here](https://docs.cloud.oracle.com/en-us/iaas/Content/API/Concepts/sdkconfig.htm).  Please note add the real path for "key_file".  The script will use this file in preference to any config file you have already configured for the OCI Python SDK.Edit oci_config and provide the Tenancy ID, fingerprint and key_file of something unspecified in your documentation. I need to go somewhere else to find what this is.
 4. Edit settings.json as per the table below<br/>
