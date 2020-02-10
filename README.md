@@ -15,11 +15,11 @@ The script supports a 2 node failover cluster for Windows Server 2016 or Windows
 * A 2 node Windows Failover Cluster must be setup and configured on OCI before using the script, and the node and cluster IP addresses defined in OCI. Optionally a SQL Server cluster can also be setup.
 * A directory in an identical location of your choice on both nodes.
 * The script is written in [Python](https://www.python.org/downloads/) and uses the [OCI Python SDK](https://github.com/oracle/oci-python-sdk).
-    * Both must be installed on both nodes of the cluster prior to installing and configuring the script.
+    * Both must be installed on both nodes of the windows cluster prior to installing and configuring the script.
 
 ## Installation and Configuration
 
-On both nodes of the cluster:
+On both nodes of the windows cluster:
 
 1. Copy the contents of the repo to the directory previously created
 2. Edit oci-mscluster-scheduler.xml and replace <location of python> with the path to the Python 3  binary on each Windows host and the path to the directory where you have copied the repo in the working directory
