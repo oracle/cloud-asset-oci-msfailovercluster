@@ -11,41 +11,33 @@ The script supports a 2 node failover cluster for Windows Server 2016 or Windows
 
 
 * A knowledge of Windows Server setup and administration is required.
+* A knowledge of Oracle Cloud Infrastructure and use of the OCI Python SDK is required.
 * A 2 node Windows Failover Cluster must be setup and configured on OCI before using the script, and the node and cluster IP addresses defined in OCI.
 * A directory in an identical location of your choice on both nodes.
 * The script is written in [Python](https://www.python.org/downloads/) and uses the [OCI Python SDK](https://github.com/oracle/oci-python-sdk).
     * Both must be installed on both nodes of the cluster prior to installing and configuring the script.
 
-## Implementation
+## Installation and Configuration
 
-1. Clone the repo to both Windows hosts
-2. Edit oci-mscluster-scheduler.xml and replace <location of python> with the path to the Python 3  binary on each Windows host and the path to the. You also probably need to provide the path to the Python file but that's not specified in the XML or documentation.
-3. Edit oci_config and provide the Tenancy ID, fingerprint and key_file of something unspecified in your documentation. I need to go somewhere else to find what this is.
-4. Edit settings.json and replace the field placeholders with some values, but what these values are or where I would look. The comments in the README just duplicate the field names.
-6. Add the script to Task Scheduler via the XML file but this final step isn't formatted properly so the sentence just appears to end in the middle. This is a Markdown thing.
+On both nodes of the cluster:
 
+1. Copy the contents of the repo the the directory previously created
+2. Edit oci-mscluster-scheduler.xml and replace <location of python> with the path to the Python 3  binary on each Windows host and the path to the directory where you have copied the repo in the working directory
+3. Edit the oci_config file.  It is preformatted.  It has placed holders for the values required to configure the OCI Python SDK, these are documented [here](https://docs.cloud.oracle.com/en-us/iaas/Content/API/Concepts/sdkconfig.htm).  Please note add the real path for "key_file".  The script will use this file in preference to any config file you have already configured for the OCI Python SDK.Edit oci_config and provide the Tenancy ID, fingerprint and key_file of something unspecified in your documentation. I need to go somewhere else to find what this is.
+4. Edit settings.json as per the table below<br/>
 
-
-## Configuration
-
-The `oci_config` file is preformatted.  It has placed holders for the values required to configure the OCI Python SDK, these are documented [here](https://docs.cloud.oracle.com/en-us/iaas/Content/API/Concepts/sdkconfig.htm).  Update it as appropriate. Please note add the real path for "key_file".  The script will use this file in preference to any config file you have already configured for the OCI Python SDK.
-
-The `settings.json` configures the script for your specific environment.  It is preformated with placeholders.  Update it as appropriate:
-
-```javascript
-{
-    "node1_name": "<Cluster Node Name 1>",  // Required Cluster Node Name 1
-    "node2_name": "<Cluster Node Name 2>",  // Required Cluster Node Name 2
-    "sql_cluster_name": "<sql cluster name>", // If SQL Server is in a cluster as well, specify the cluster name.  If not specified private_ip_id_sql_cluster will be ignored and is not required.
-    "private_ip_id_default_cluster": "<ocid of windows cluster private IP>", // Required
-    "private_ip_id_sql_cluster":"<ocid of SQL Server cluster private IP>", // Ignored if SQL Server cluster not present see above
-    "skip_dr_node_name":"",  // If the cluster contains a DR node in a different DataCenter, specify its name here and it will be ignored by the script (which is for HA not DR)
-    "vnic_1": "<ocid of Node 1 VNIC>", // Required
-    "vnic_2": "<ocid of Node 2 VNIC>" // Required
-}
-```
-
-To automatically start the script at boot time, import in Task Scheduler the XML file `oci-mscluster-scheduler.xml`. Remember to change the path to the script at <Command></Command>.
+| Field Name | Description |
+| ------ | ------ |
+| node1_name | The name of the first node that is configured in the Windows Cluster |
+| node2_name | The name of the second node that is configured in the Windows Cluster | 
+| sql_cluster_name | If SQL Server is in a cluster as well, specify the configured cluster name.  If not specified private_ip_id_sql_cluster will be ignored and is not required. |
+| private_ip_id_default_cluster | OCID of the secondary IP address configured as the Windows cluster IP address |
+| private_ip_id_sql_cluster | OCID of the secondary IP addeess configured as the SQL Server IP address |
+| skip_dr_node_name | If the cluster contains a DR node in a different DataCenter, specify its name here and it will be ignored by the script (which is for HA not DR)
+| vnic_1 | OCID of the primary vNIC of Node 1 |
+| vnic_2 | OCID of the primary vNIC of Node 2 |
+5. Add the script to Task Scheduler by using the oci-mscluster-scheduler.xml file:<br/>
+   eg: ```schtasks.exe /create /tn IPFailover /xml "<repo directory>oci-mscluster-scheduler.xml" /f```
 
 ## Help
 * The [Issues](https://github.com/oracle/cloud.asset.oci-msfailovercluster/issues) page of this GitHub repository.
