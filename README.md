@@ -40,4 +40,4 @@ On both nodes of the windows cluster:
    eg: ```schtasks.exe /create /tn IPFailover /xml "<repo directory>oci-mscluster-scheduler.xml" /f```
 
 ## Help
-* The [Issues](https://github.com/oracle/cloud.asset.oci-msfailovercluster/issues) page of this GitHub repository.
+* The [Issues](https://github.com/oracle/cloud-asset-oci-msfailovercluster/issues) page of this GitHub repository.
